@@ -7,7 +7,7 @@
 ### 폴더 구조
 
 ```
-D:\aiffel\aiffel_quest_rs/
+aiffel_quest_rs/
 ├───README.md
 ├───Exploration/
 │   ├───EX01/
