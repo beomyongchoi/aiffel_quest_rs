@@ -3,26 +3,25 @@
 ### 폴더 구조
 
 ```
-aiffel/aiffel_quest_rs/
+D:\aiffel\aiffel_quest_rs/
 ├───README.md
 ├───Exploration/
-│   ├───Ex01/
+│   ├───EX01/
 │   │   └───README.md
-│   ├───Ex02/
+│   ├───EX02/
 │   │   └───README.md
-│   ├───Ex03/
+│   ├───EX03/
 │   │   └───README.md
-│   ├───Ex04/
+│   ├───EX04/
 │   │   └───README.md
-│   ├───Ex05/
+│   ├───EX05/
 │   │   └───README.md
-│   ├───Ex06/
+│   ├───EX06/
 │   │   └───README.md
-│   └───Ex07/
+│   └───EX07/
 │       └───README.md
 ├───GoingDeeper/
 │   ├───GD01/
-│   │   ├───gd01.ipynb
 │   │   └───README.md
 │   ├───GD02/
 │   │   └───README.md
@@ -60,7 +59,6 @@ aiffel/aiffel_quest_rs/
 │       └───README.md
 └───MainQuest/
     ├───Quest01/
-    │   ├───mq01.ipynb
     │   └───README.md
     ├───Quest02/
     │   └───README.md
