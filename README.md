@@ -1,4 +1,8 @@
-# AIFFEL 퀘스트
+# [AIFFEL](https://aiffel.io/) 퀘스트 레포
+
+* [AIFFEL](https://aiffel.io/) 과정 중 진행하는 리서치 프로젝트 및 피어 리뷰를 관리하는 [Repository](https://github.com/beomyongchoi/aiffel_quest_rs)입니다.
+* 다양한 탐색과 실험을 통해 얻은 `인사이트`를 기록하고 `공유`하는 공간입니다.
+* 해당 과정에서 [쉐밸그투](https://modulabs.co.kr/modulabs-story) 학습을 추구합니다.
 
 ### 폴더 구조
 
