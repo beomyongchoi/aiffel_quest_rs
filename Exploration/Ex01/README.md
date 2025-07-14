@@ -1,5 +1,5 @@
 # AIFFEL Campus Online Code Peer Review Templete
-- 코더 : 최범용 박범찬
+- 코더 : 최범용
 - 리뷰어 : 
 
 
