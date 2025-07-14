@@ -12,6 +12,8 @@ aiffel_quest_rs/
 ├───Exploration/
 │   ├───EX01/
 │   │   └───README.md
+│   │   └───diabetes.ipynb
+│   │   └───sharing_bike.ipynb
 │   ├───EX02/
 │   │   └───README.md
 │   ├───EX03/
