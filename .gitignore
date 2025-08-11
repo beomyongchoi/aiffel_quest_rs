@@ -1,1 +1,16 @@
 .DS_Store
+**/*.gz
+**/*.json
+**/*.csv
+**/*.tsv
+**/*.zip
+**/*.tar
+**/*.tar.gz
+**/*.tar.bz2
+**/*.tar.xz
+**/*.txt
+**/*.log
+**/*.pickle
+**/*.npz
+**/*.model
+**/*.npy
