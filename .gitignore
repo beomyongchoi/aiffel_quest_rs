@@ -14,3 +14,5 @@
 **/*.npz
 **/*.model
 **/*.npy
+**/results
+**/*.pt
