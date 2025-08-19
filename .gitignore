@@ -16,3 +16,5 @@
 **/*.npy
 **/results
 **/*.pt
+**/*.vocab
+**/*.pth
