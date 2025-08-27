@@ -18,3 +18,5 @@
 **/*.pt
 **/*.vocab
 **/*.pth
+**/*.train.*
+**/Mecab-ko-for-Google-Colab/
