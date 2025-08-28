@@ -54,14 +54,14 @@ Mecab보다 성능은 낮았지만, SentencePiece는 언어학적 지식이나 �
 ## 3. 전체 실험 과정 노트북
 
 - **SentencePiece 최초 학습 모델**
-  - `[nsmc_with_sentencepiece.ipynb](./nsmc_with_sentencepiece.ipynb)`
+  - [nsmc_with_sentencepiece.ipynb](./nsmc_with_sentencepiece.ipynb)
 - **SentencePiece 리팩토링 버전**
-  - `[nsmc_with_sentencepiece_v2.ipynb](./nsmc_with_sentencepiece_v2.ipynb)`
+  - [nsmc_with_sentencepiece_v2.ipynb](./nsmc_with_sentencepiece_v2.ipynb)
 - **KoNLPy (Okt) 비교 모델**
-  - `[nsmc_with_okt.ipynb](./nsmc_with_okt.ipynb)`
+  - [nsmc_with_okt.ipynb](./nsmc_with_okt.ipynb)
 - **KoNLPy (Mecab) 비교 모델**
-  - `[nsmc_with_mecab.ipynb](./nsmc_with_mecab.ipynb)`
+  - [nsmc_with_mecab.ipynb](./nsmc_with_mecab.ipynb)
 - **SentencePiece (Unigram vs BPE) 비교 모델**
-  - `[nsmc_with_sentencepiece_v3.ipynb](./nsmc_with_sentencepiece_v3.ipynb)`
+  - [nsmc_with_sentencepiece_v3.ipynb](./nsmc_with_sentencepiece_v3.ipynb)
 - **SentencePiece (vocab_size) 성능 테스트**
-  - `[nsmc_sp_vocab_test.ipynb](./nsmc_sp_vocab_test.ipynb)`
+  - [nsmc_sp_vocab_test.ipynb](./nsmc_sp_vocab_test.ipynb)
