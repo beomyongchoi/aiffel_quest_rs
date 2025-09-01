@@ -9,7 +9,7 @@
     - <img width="1073" height="471" alt="2025-09-01 170758" src="https://github.com/user-attachments/assets/bbbb5256-fff0-4b41-8365-2c33235fbeef" />  
     - <img width="1073" height="634" alt="2025-09-01 170814" src="https://github.com/user-attachments/assets/f93d8c3c-0f3b-4cfb-aca6-a05d42dbf645" />  
     - <img width="568" height="335" alt="2025-09-01 170822" src="https://github.com/user-attachments/assets/80b476af-cfca-485e-bf1e-6c6a7b40f98f" />  
-     * 8개 모델 X 사이즈 3개이상 총 3개 + 딥러닝 모델 2개 사용 
+     ▷ 8개 모델 X 사이즈 3개이상 총 3개 + 딥러닝 모델 2개 사용  
     
 
 - [x]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
@@ -19,7 +19,7 @@
     - 해당 코드의 기능, 존재 이유, 작동 원리 등을 기술했는지 확인
     - 주석을 보고 코드 이해가 잘 되었는지 확인
     - <img width="908" height="716" alt="2025-09-01 171352" src="https://github.com/user-attachments/assets/cb4c4dc0-c69e-49f2-85c4-2ec4210b9841" />  
-        * 요구조건을 수렴하는 핵심 코드 
+       ▷ 요구조건을 수렴하는 핵심 코드  
 
 - [x]  **3. 에러가 난 부분을 디버깅하여 문제를 해결한 기록을 남겼거나
 새로운 시도 또는 추가 실험을 수행해봤나요?**
@@ -28,7 +28,7 @@
     - <img width="1004" height="646" alt="2025-09-01 171459" src="https://github.com/user-attachments/assets/be422634-bd5a-4dd5-9141-65b79c29d809" />  
     - <img width="970" height="633" alt="2025-09-01 171556" src="https://github.com/user-attachments/assets/98d348d1-b3e1-4ba6-91b6-96511743db61" />
     - <img width="1007" height="698" alt="2025-09-01 171604" src="https://github.com/user-attachments/assets/f993f7e0-58c7-48c9-9f46-170b7755aaa7" />  
-      * 성능 비교를 위해 노드와 루브릭에서 요구되지 않은 시각화 처리  
+     ▷ 성능 비교를 위해 노드와 루브릭에서 요구되지 않은 시각화 처리   
 
     
         
@@ -36,13 +36,14 @@
     - 주어진 문제를 해결하는 완성된 코드 내지 프로젝트 결과물에 대해
     배운점과 아쉬운점, 느낀점 등이 기록되어 있는지 확인
     - <img width="1066" height="373" alt="2025-09-01 170848" src="https://github.com/user-attachments/assets/3af61d11-4387-4063-a355-bb96d21f29cd" />
+    
 
 
 - [x]  **5. 코드가 간결하고 효율적인가요?**
     - 파이썬 스타일 가이드 (PEP8) 를 준수하였는지 확인
     - 코드 중복을 최소화하고 범용적으로 사용할 수 있도록 함수화/모듈화했는지 확인
     - <img width="948" height="381" alt="2025-09-01 171755" src="https://github.com/user-attachments/assets/25bf3b42-d6eb-49de-9565-9fa3024fad0d" />
-        * 효율적인 실험을 위해 모듈화된 코드 사용  
+        ▷ 효율적인 실험을 위해 모듈화된 코드 사용  
 
 
 # 회고(참고 링크 및 코드 개선)  
