@@ -8,63 +8,102 @@
 
 ```
 aiffel_quest_rs/
+├───.gitignore
 ├───README.md
 ├───Exploration/
-│   ├───EX01/
-│   │   └───README.md
-│   │   └───diabetes.ipynb
+│   ├───Ex01/
+│   │   ├───README.md
+│   │   ├───diabetes.ipynb
 │   │   └───sharing_bike.ipynb
-│   ├───EX02/
-│   │   └───README.md
-│   ├───EX03/
-│   │   └───README.md
-│   ├───EX04/
-│   │   └───README.md
-│   ├───EX05/
-│   │   └───README.md
-│   ├───EX06/
-│   │   └───README.md
-│   └───EX07/
-│       └───README.md
+│   ├───Ex02/
+│   │   ├───README.md
+│   │   ├───2019-ml-month-2nd-baseline.ipynb
+│   │   ├───house-price-prediction-by-beomyongchoi.ipynb
+│   │   └───data/
+│   │       └───kaggle_score.png
+│   ├───Ex03/
+│   │   ├───README.md
+│   │   ├───cat-whisker-multiple-faces.ipynb
+│   │   ├───cat-whisker-two-faces.ipynb
+│   │   ├───cat-whiskers.ipynb
+│   │   ├───images/
+│   │   │   ├───cat-whiskers.png
+│   │   │   ├───IMG_0616.png
+│   │   │   ├───IMG_6670.png
+│   │   │   ├───soccer-cat-whiskers.png
+│   │   │   └───soccer.png
+│   │   └───models/
+│   │       └───shape_predictor_68_face_landmarks.dat
+│   ├───Ex04/
+│   │   ├───README.md
+│   │   ├───images/
+│   │   │   ├───cat.png
+│   │   │   ├───hard-to-recognize.png
+│   │   │   ├───img1.png
+│   │   │   ├───img1_2.png
+│   │   │   ├───img1_3.png
+│   │   │   ├───img2_1.png
+│   │   │   ├───img3_1.png
+│   │   │   ├───img4_1.png
+│   │   │   ├───person.png
+│   │   │   ├───portrait-failure1.png
+│   │   │   ├───portrait-failure2.png
+│   │   │   └───sand.png
+│   │   ├───portrait.ipynb
+│   │   └───potrait-has-problems.ipynb
+│   ├───Ex05/
+│   │   ├───README.md
+│   │   ├───Ex05_1_1.png
+│   │   ├───Ex05_1_2.png
+│   │   ├───Ex05_2_1.png
+│   │   ├───Ex05_3_1.png
+│   │   ├───Ex05_4_1.png
+│   │   ├───Ex05_5_1.png
+│   │   ├───movie-review.ipynb
+│   │   └───naver-review.ipynb
+│   ├───Ex06/
+│   │   ├───.ipynb_checkpoints/
+│   │   │   └───README-checkpoint.md
+│   │   ├───README.md
+│   │   ├───news-summarization.ipynb
+│   │   └───review-summary.ipynb
+│   └───Ex07/
+│       ├───README.md
+│       └───chatbot.ipynb
 ├───GoingDeeper/
-│   ├───GD01/
+│   ├───GD01-02/
+│   │   ├───ANALYSIS.md
+│   │   ├───README.md
+│   │   ├───nsmc_sp_vocab_test.ipynb
+│   │   ├───nsmc_with_mecab.ipynb
+│   │   ├───nsmc_with_okt.ipynb
+│   │   ├───nsmc_with_sentencepiece.ipynb
+│   │   ├───nsmc_with_sentencepiece_v2.ipynb
+│   │   └───nsmc_with_sentencepiece_v3.ipynb
+│   ├───GD03-04/
+│   │   ├───ANALYSIS.md
+│   │   ├───README.md
+│   │   ├───news_classification.ipynb
+│   │   ├───news_classification_ml_vs_dl_v1.ipynb
+│   │   ├───news_classification_ml_vs_dl_v2.ipynb
+│   │   └───news_classification_vocab_size.ipynb
+│   ├───GD05-06/
 │   │   └───README.md
-│   ├───GD02/
+│   ├───GD07-08/
 │   │   └───README.md
-│   ├───GD03/
+│   ├───GD09-10/
 │   │   └───README.md
-│   ├───GD04/
+│   ├───GD11-12/
 │   │   └───README.md
-│   ├───GD05/
+│   ├───GD13-14/
 │   │   └───README.md
-│   ├───GD06/
+│   ├───GD15-16/
 │   │   └───README.md
-│   ├───GD07/
-│   │   └───README.md
-│   ├───GD08/
-│   │   └───README.md
-│   ├───GD09/
-│   │   └───README.md
-│   ├───GD10/
-│   │   └───README.md
-│   ├───GD11/
-│   │   └───README.md
-│   ├───GD12/
-│   │   └───README.md
-│   ├───GD13/
-│   │   └───README.md
-│   ├───GD14/
-│   │   └───README.md
-│   ├───GD15/
-│   │   └───README.md
-│   ├───GD16/
-│   │   └───README.md
-│   ├───GD17/
-│   │   └───README.md
-│   └───GD18/
+│   └───GD17-18/
 │       └───README.md
 └───MainQuest/
     ├───Quest01/
+    │   ├───GPT-1.ipynb
     │   └───README.md
     ├───Quest02/
     │   └───README.md
