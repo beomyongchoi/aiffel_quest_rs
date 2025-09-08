@@ -1,7 +1,7 @@
 # 한영 번역기 모델 개선 과정 분석 보고서
 
 ## 1. 초기 접근: 단어 기반 Seq2Seq 모델
-- **모델**: `Seq2Seq + Attention` ([v3](@/GoingDeeper/GD07-08/translator_ko_en_v3.ipynb), [v4](@/GoingDeeper/GD07-08/translator_ko_en_v4.0.ipynb))
+- **모델**: `Seq2Seq + Attention` ([v3](./translator_ko_en_v3.ipynb), [v4](./translator_ko_en_v4.0.ipynb))
 - **토큰화**: 한국어(`Mecab`), 영어(`split()`) 단어 기반 토큰화.
 - **결과**: PPL 577. 수치상으로 유의미한 번역 성능 확보 실패.
 - **번역 품질**: `obama is , , president bush is a .` 등 문법적 오류 및 의미 왜곡 발생.
@@ -15,7 +15,7 @@
 
 ## 2. 대안 탐색: 서브워드 토큰화 (SentencePiece)
 - **가설**: OOV 문제를 해결하고, 단어를 의미 단위(subword)로 분리하여 모델의 언어 구조 학습 능력을 향상시킬 수 있을 것.
-- **시도**: `SentencePiece` 라이브러리를 활용, 한국어와 영어 코퍼스를 합쳐 **공유 어휘(Shared Vocabulary)** 모델 생성 및 적용 ([v5](@/GoingDeeper/GD07-08/translator_ko_en_v4.0.1.ipynb)).
+- **시도**: `SentencePiece` 라이브러리를 활용, 한국어와 영어 코퍼스를 합쳐 **공유 어휘(Shared Vocabulary)** 모델 생성 및 적용 ([v5](./translator_ko_en_v4.0.1.ipynb)).
 - **결과**: PPL 868. 오히려 성능이 이전보다 크게 하락.
 
 #### **한계 분석: 왜 공유 어휘는 실패했는가?**
@@ -29,24 +29,24 @@
 ## 3. 전략 수정: Seq2Seq 모델의 점진적 개선
 - **방향**: `SentencePiece`의 실패를 교훈 삼아, 가장 안정적이었던 v4 모델을 기반으로 다른 변수를 통제하며 점진적 개선 추구.
 
-- **시도 1 (v4.1 - 모델 확장)**: 영어 토크나이저 개선(`spaCy`) 및 모델 용량 증설 (`HID_DIM`, `N_LAYERS` ↑) ([v4.1](@/GoingDeeper/GD07-08/translator_ko_en_v4.1.ipynb)).
+- **시도 1 (v4.1 - 모델 확장)**: 영어 토크나이저 개선(`spaCy`) 및 모델 용량 증설 (`HID_DIM`, `N_LAYERS` ↑) ([v4.1](./translator_ko_en_v4.1.ipynb)).
     - **결과**: PPL 774. 과적합(Overfitting) 발생.
     - **한계 분석 (왜 과적합되었나?)**: 제한된 데이터셋(약 9만 건)의 복잡도에 비해 모델의 표현력(Capacity)이 과도하게 컸음. 일반화된 번역 패턴 학습 대신 훈련 데이터 자체를 암기하는 현상 발생. **모델을 무조건 키우는 것이 정답이 아님을 확인.**
 
-- **시도 2 (v4.2 - RNN 유닛 변경)**: 안정적인 v4 하이퍼파라미터 기준, RNN 유닛을 GRU에서 **LSTM**으로 교체 ([v4.2](@/GoingDeeper/GD07-08/translator_ko_en_v4.2_lstm.ipynb)).
+- **시도 2 (v4.2 - RNN 유닛 변경)**: 안정적인 v4 하이퍼파라미터 기준, RNN 유닛을 GRU에서 **LSTM**으로 교체 ([v4.2](./translator_ko_en_v4.2_lstm.ipynb)).
     - **결과**: PPL 567. GRU 모델(PPL 577) 대비 소폭의 의미 있는 성능 향상.
     - **분석**: LSTM의 더 복잡한 게이트(Forget, Input, Output) 구조가 GRU보다 장기 의존성(Long-term dependency) 정보를 조금 더 효과적으로 제어하고 보존했음을 시사.
 
-- **시도 3 (v4.4 - 최종 조합)**: 검증된 최고 요소(LSTM + `spaCy`) 결합 ([v4.4](@/GoingDeeper/GD07-08/translator_ko_en_v4.4_lstm_spacy.ipynb)).
+- **시도 3 (v4.4 - 최종 조합)**: 검증된 최고 요소(LSTM + `spaCy`) 결합 ([v4.4](./translator_ko_en_v4.4_lstm_spacy.ipynb)).
     - **결과**: **PPL 562.5.** Seq2Seq 프레임워크 내에서 달성한 **최고 성능 기록.**
 
 #### **Seq2Seq 모델 성능 요약**
 
 | 모델 버전 | RNN 유닛 | 토크나이저 (Eng) | Test PPL | 주요 변경점 및 결과 |
 | :--- | :---: | :---: | :---: | :--- |
-| [v4.0](@/GoingDeeper/GD07-08/translator_ko_en_v4.0.ipynb) | GRU | `split()` | 577.4 | 베이스라인 모델 |
-| [v4.2](@/GoingDeeper/GD07-08/translator_ko_en_v4.2_lstm.ipynb) | **LSTM** | `split()` | 567.7 | GRU -> LSTM 변경으로 성능 소폭 향상 |
-| [v4.4](@/GoingDeeper/GD07-08/translator_ko_en_v4.4_lstm_spacy.ipynb) | **LSTM** | **`spaCy`** | **562.5** | 영어 토크나이저 개선으로 최고 성능 달성 |
+| [v4.0](./translator_ko_en_v4.0.ipynb) | GRU | `split()` | 577.4 | 베이스라인 모델 |
+| [v4.2](./translator_ko_en_v4.2_lstm.ipynb) | **LSTM** | `split()` | 567.7 | GRU -> LSTM 변경으로 성능 소폭 향상 |
+| [v4.4](./translator_ko_en_v4.4_lstm_spacy.ipynb) | **LSTM** | **`spaCy`** | **562.5** | 영어 토크나이저 개선으로 최고 성능 달성 |
 
 ---
 
@@ -58,15 +58,15 @@
     2.  **장기 의존성 문제**: 문장이 길어질수록, 문장 앞부분의 정보가 뒤로 전달되며 점차 희석됨. 어텐션으로 이를 일부 보완했지만, 컨텍스트 벡터 자체가 이미 손실된 정보를 담고 있다는 근본적 한계 존재.
 
 - **최종 가설**: 점진적 개선이 아닌, 아키텍처의 근본적 전환(Transformer)만이 성능의 비약적인 도약을 만들 수 있음.
-- **최종 실험 ([v5.1](@/GoingDeeper/GD07-08/translator_ko_en_v5.1_transformer.ipynb))**: `Mecab` + `spaCy` 전처리 방식은 유지, 모델 엔진을 **트랜스포머**로 교체.
+- **최종 실험 ([v5.1](./translator_ko_en_v5.1_transformer.ipynb))**: `Mecab` + `spaCy` 전처리 방식은 유지, 모델 엔진을 **트랜스포머**로 교체.
 - **결과**: **Test PPL 69.7 달성.** Seq2Seq(562.5) 대비 **압도적인 성능 향상.**
 
 #### **최종 모델 성능 비교**
 
 | 아키텍처 | 모델 버전 | Test PPL | 성능 향상률 (PPL 기준) |
 | :--- | :---: | :---: | :---: |
-| Seq2Seq (LSTM) | [v4.4](@/GoingDeeper/GD07-08/translator_ko_en_v4.4_lstm_spacy.ipynb) | 562.5 | - |
-| **Transformer** | [v5.1](@/GoingDeeper/GD07-08/translator_ko_en_v5.1_transformer.ipynb) | **69.7** | **87.6% 감소** |
+| Seq2Seq (LSTM) | [v4.4](./translator_ko_en_v4.4_lstm_spacy.ipynb) | 562.5 | - |
+| **Transformer** | [v5.1](./translator_ko_en_v5.1_transformer.ipynb) | **69.7** | **87.6% 감소** |
 
 ### 4.1. 트랜스포머 모델의 실제 번역 결과
 - **번역 예시 (입력: `오바마는 대통령이다.`):**
