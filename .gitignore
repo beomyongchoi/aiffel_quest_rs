@@ -22,3 +22,6 @@
 **/*.test.*
 **/*.dev.*
 **/Mecab-ko-for-Google-Colab/
+**/*.bin
+**/*.ttf
+**/*.vec
