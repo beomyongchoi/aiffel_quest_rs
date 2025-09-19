@@ -26,3 +26,5 @@
 **/*.ttf
 **/*.vec
 **/*.memmap
+**/chatgpt/*
+**/data/*
